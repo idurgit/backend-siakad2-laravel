@@ -23,7 +23,23 @@
                     <li>
                         <a class="nav-link" href="{{ route('user.index') }}">User List</a>
                     </li>
-                    
+
+                </ul>
+            </li>
+            <li class="nav-item dropdwon">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Subjects</span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{ route('subject.index') }}" class="nav-link">Subject List</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdwon">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Schedules</span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{ route('schedule.index') }}" class="nav-link">Schedule List</a>
+                    </li>
                 </ul>
             </li>
     </aside>

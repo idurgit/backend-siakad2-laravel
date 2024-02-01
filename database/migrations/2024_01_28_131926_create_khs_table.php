@@ -11,15 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('schedules', function (Blueprint $table) {
+        Schema::create('khs', function (Blueprint $table) {
             $table->id();
             $table->foreignId('subject_id')->constrained('subjects');
             $table->foreignId('student_id')->constrained('users');
-            $table->string('hari');
-            $table->string('jam_mulai');
-            $table->string('jam_selesai');
-            $table->string('ruangan');
-            $table->string('kode_absensi')->nullable();
+            $table->string('nilai');
+            $table->string('grade');
+            $table->string('keterangan')->nullable();
             $table->string('tahun_akademik');
             $table->string('semester');
             $table->string('created_by');
@@ -34,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('schedules');
+        Schema::dropIfExists('khs');
     }
 };

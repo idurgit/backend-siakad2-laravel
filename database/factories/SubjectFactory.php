@@ -18,7 +18,12 @@ class SubjectFactory extends Factory
     {
         return [
             'title' => fake()->word(),
-            'lecturer_id' => 3,
+            'lecturer_id' => \App\Models\User::factory(),
+            'semester' => 'Ganjil',
+            'academic_year' => '2021/2022',
+            'sks' => 3,
+            'code' => $this->faker->unique()->regexify('[A-Z]{3}[0-9]{3}'),
+            'description' => $this->faker->paragraph(3),
         ];
     }
 }
