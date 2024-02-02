@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('keterangan')->nullable();
             $table->string('latitude');
             $table->string('longitude');
-            $table->string('nilai');
+            $table->string('nilai')->nullable();
             $table->string('created_by');
             $table->string('updated_by');
             $table->string('deleted_by')->nullable();

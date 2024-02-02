@@ -5,24 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AbsensiMatkul extends Model
+class StudentSchedule extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'schedule_id',
         'student_id',
-        'kode_absensi',
-        'tahun_akademik',
-        'semester',
-        'pertemuan',
-        'status',
-        'keterangan',
-        'latitude',
-        'longitude',
-        'nilai',
-        'created_by',
-        'updated_by',
+        'schedule_id',
     ];
 
     public function schedule()
